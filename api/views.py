@@ -17,3 +17,10 @@ class ProfileDetail(generics.ListAPIView):
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
+    
+
+
+from django.http import JsonResponse
+
+def root_view(request):
+    return JsonResponse({"message": "Django backend is running ✅"})
